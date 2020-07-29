@@ -45,11 +45,17 @@ TagManager:
   - name: Tile
     uniqueID: 841425837
     locked: 0
+  - name: Bounds
+    uniqueID: 2781122095
+    locked: 0
   - name: Trap
     uniqueID: 329158071
     locked: 0
   - name: Chest and Exit
     uniqueID: 3618212309
+    locked: 0
+  - name: Exit
+    uniqueID: 4131659267
     locked: 0
   - name: Player
     uniqueID: 733993879
