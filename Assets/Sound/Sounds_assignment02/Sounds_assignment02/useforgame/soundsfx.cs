@@ -5,6 +5,7 @@ using UnityEngine;
 public class soundsfx : MonoBehaviour
 {
     public AudioSource playsound;
+    public GameObject player;
 
     void OnTriggerEnter(Collider other)
     {

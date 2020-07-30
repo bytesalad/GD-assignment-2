@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class pickup_addtoplayerscript : MonoBehaviour
 {
-    private int collectablecount; //store number of diamonds collected
+    public int collectablecount; //store number of diamonds collected
     public Text collectabletext;//UI disp number of collected items
     public int maxgems;
 

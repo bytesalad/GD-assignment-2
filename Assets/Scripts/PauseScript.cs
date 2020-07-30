@@ -32,4 +32,9 @@ public class PauseScript : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void RetryLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
