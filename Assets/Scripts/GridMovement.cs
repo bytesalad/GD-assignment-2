@@ -7,6 +7,7 @@ public class GridMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public Transform movePoint;
     public LayerMask whatStopsMovement;
+    public AudioSource footstepsSFX;
     
     void Start()
     {
@@ -27,6 +28,7 @@ public class GridMovement : MonoBehaviour
                 if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), 0.2f, whatStopsMovement)) //if there is NOT a collider left or right of the player in whatStopsMoving layer
                 {
                     movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f); // move move point 
+                    footstepsSFX.Play();
                 }
             }
             else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1)//if player inputs
@@ -34,6 +36,7 @@ public class GridMovement : MonoBehaviour
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), 0.2f, whatStopsMovement))//if there is NOT a collider above of below of the player in whatStopsMoving layer
                 {
                     movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);// move move point
+                    footstepsSFX.Play();
                 }
             }
         }
