@@ -14,6 +14,18 @@ public class PlayerFlashlight : MonoBehaviour
     private float time = 0;
     private bool active = false;
 
+    public float getDuration()
+    {
+        if (!active)
+        {
+            return (time / timeRecharge) * 100f;
+        }
+        else
+        {
+            return 0f;
+        }
+    }
+
     private void Start()
     {
         time = timeRecharge;
