@@ -8,6 +8,7 @@ public class pickup_addtoplayerscript : MonoBehaviour
 {
     private int collectablecount; //store number of diamonds collected
     public Text collectabletext;//UI disp number of collected items
+    public int maxgems;
 
     public int getCollectableCount()
     {
@@ -36,5 +37,6 @@ public class pickup_addtoplayerscript : MonoBehaviour
     {
         //TODO: Uncomment to update UI.
         //collectabletext.text = "diamonds collected: " + collectablecount.ToString();
+        collectabletext.text = collectablecount.ToString() + "/" + maxgems.ToString();
     }
 }
