@@ -41,6 +41,15 @@ Tilemap:
   m_GameObject: {fileID: 6485038824141639426}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: -1, y: -6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 35
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741824
   - first: {x: 2, y: -6, z: 0}
     second:
       serializedVersion: 2
@@ -356,7 +365,15 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
-  m_AnimatedTiles: {}
+  m_AnimatedTiles:
+  - first: {x: -1, y: -6, z: 0}
+    second:
+      m_AnimatedSprites:
+      - {fileID: 21300000, guid: f4532f43faa8bd24bb24a635f1835067, type: 3}
+      - {fileID: 21300000, guid: a59f8753be5f05949ae76a13fb7adaf9, type: 3}
+      m_AnimationSpeed: 1
+      m_AnimationTimeOffset: 0
+      m_IsLooping: 1
   m_TileAssetArray:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: cc0f602b362c28f4380170d96de51635, type: 2}
@@ -428,8 +445,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: c293cf30a541d5244a0818a94672b419, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: bf69df567c3cdf44bb3e7ab2d81233aa, type: 2}
-  m_TileSpriteArray:
   - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: eb88689a69969604cabe4627ba0880ce, type: 2}
+  m_TileSpriteArray:
+  - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: a59f8753be5f05949ae76a13fb7adaf9, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: cd2dc77b6cdfa2b439fe6404564f89bb, type: 3}
@@ -500,7 +519,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 43cbe72c77001d44ab9feccd6f2b0b9a, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 35
+  - m_RefCount: 36
     m_Data:
       e00: 1
       e01: 0
@@ -519,7 +538,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 35
+  - m_RefCount: 36
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
