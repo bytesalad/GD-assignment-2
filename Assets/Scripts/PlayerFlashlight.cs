@@ -6,6 +6,8 @@ using UnityEngine.Tilemaps;
 public class PlayerFlashlight : MonoBehaviour
 {
     [SerializeField] private TilemapRenderer trapRenderer;
+    [SerializeField] private Material normalTrapMat;
+    [SerializeField] private Material redTrapMat;
     [SerializeField] private float timeActive;
     [SerializeField] private float timeRecharge;
     [SerializeField] private KeyCode flashlightKey;
@@ -31,8 +33,8 @@ public class PlayerFlashlight : MonoBehaviour
                 {
                     active = true;
                     time = 0;
-                    //activate renderers.
-                    Debug.Log("Flashlight activated!");
+                    trapRenderer.enabled = true;
+                    trapRenderer.material = redTrapMat;
                 }
             }
         }
@@ -45,7 +47,10 @@ public class PlayerFlashlight : MonoBehaviour
             else
             {
                 active = false;
+                time = 0;
                 //deactivate renderers again.
+                trapRenderer.material = normalTrapMat;
+                trapRenderer.enabled = false;
             }
         }
     }
