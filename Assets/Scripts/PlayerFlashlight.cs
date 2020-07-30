@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class PlayerFlashlight : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class PlayerFlashlight : MonoBehaviour
     [SerializeField] private float timeActive;
     [SerializeField] private float timeRecharge;
     [SerializeField] private KeyCode flashlightKey;
+    [SerializeField] private Image flashLightImage;
+    [SerializeField] private Sprite off;
+    [SerializeField] private Sprite on;
     private float time = 0;
     private bool active = false;
 
@@ -18,7 +22,7 @@ public class PlayerFlashlight : MonoBehaviour
     {
         if (!active)
         {
-            return (time / timeRecharge) * 100f;
+            return time / timeRecharge;
         }
         else
         {
@@ -29,6 +33,7 @@ public class PlayerFlashlight : MonoBehaviour
     private void Start()
     {
         time = timeRecharge;
+        flashLightImage.sprite = off;
     }
 
     private void Update()
@@ -47,6 +52,7 @@ public class PlayerFlashlight : MonoBehaviour
                     time = 0;
                     trapRenderer.enabled = true;
                     trapRenderer.material = redTrapMat;
+                    flashLightImage.sprite = on;
                 }
             }
         }
@@ -63,6 +69,7 @@ public class PlayerFlashlight : MonoBehaviour
                 //deactivate renderers again.
                 trapRenderer.material = normalTrapMat;
                 trapRenderer.enabled = false;
+                flashLightImage.sprite = off;
             }
         }
     }
