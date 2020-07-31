@@ -12,7 +12,6 @@ public class PauseScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseGame();
-            
         }
     }
 
@@ -28,9 +27,15 @@ public class PauseScript : MonoBehaviour
         PauseMenu.SetActive(false);
     }
 
-    public void QuitLevel()
+    public void ReturnToMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("QuitGame");
+        Application.Quit();
     }
 
     public void RetryLevel()

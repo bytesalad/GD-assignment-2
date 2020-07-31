@@ -8,7 +8,10 @@ public class GridMovement : MonoBehaviour
     public Transform movePoint;
     public LayerMask whatStopsMovement;
     public AudioSource footstepsSFX;
-    
+
+    private float movementInputDirection;
+    private bool isFacingRight = true;
+
     void Start()
     {
         //movepoint not parented to player so they dont move together
@@ -17,6 +20,17 @@ public class GridMovement : MonoBehaviour
     
     void Update()
     {
+
+        movementInputDirection = Input.GetAxisRaw("Horizontal");
+        if (isFacingRight && movementInputDirection < 0)
+        {
+            Flip();
+        }
+        else if (!isFacingRight && movementInputDirection > 0)
+        {
+            Flip();
+        }
+
         //move the player towards the movePoint
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
 
@@ -40,5 +54,12 @@ public class GridMovement : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void Flip()
+    {
+        //facingDirection *= -1;
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 }

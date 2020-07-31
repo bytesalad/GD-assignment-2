@@ -6,6 +6,14 @@ TagManager:
   tags:
   - Trap
   - Diamond
+  - PlayBox
+  - LevelSelectBox
+  - QuitBox
+  - ExitTile
+  - FinalExitTile
+  - LevelSelect1
+  - LevelSelect2
+  - LevelSelect3
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,9 @@ public class soundsfx : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        playsound.Play();
+        if(collision.tag == "Player")
+        {
+            playsound.Play();
+        }
     }
 }
